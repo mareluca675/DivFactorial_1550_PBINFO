@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+long long n, i, v[10001], factorialn = 1;
+
+int main()
+{
+    
+    cin >> n;
+    
+    int copien = n;
+    
+    while(copien > 0)
+    {
+        factorialn = factorialn * copien;
+        copien -- ;
+    }
+    
+    for(i = 1; i <= n; i++)
+    {
+        cin >> v[i];
+    }
+        
+    for(i = 1; i <= n; i++)
+    {  
+        if(factorialn % v[i] == 0)
+        {
+            cout << v[i] << " ";
+        }
+    }
+
+    return 0;
+}
